@@ -551,7 +551,9 @@
 
 				<ul>
 					<li><a href="#tabs-1"><h2><?=$Text['my_orders'];?></h2></a></li>
+					<?php if ($cfg_use_shop) {  // USE SHOP: start  ?>
 					<li><a href="#tabs-2"><h2><?=$Text['my_purchases'];?></h2></a></li>	
+					<?php } // - - - - - - - - - - USE SHOP: end ?>
 					<li><a href="#tabs-3"><h2><?=$Text['upcoming_orders'];?></h2></a></li>	
 					
 				</ul>
@@ -585,7 +587,7 @@
 						</tfoot>
 					</table>
 				</div>
-				
+				<?php if ($cfg_use_shop) {  // USE SHOP: start  ?>
 				<div id="tabs-2">
 					<table id="tbl_Shop" class="table_overviewShop">
 						<thead>
@@ -620,7 +622,7 @@
 						</tfoot>
 					</table>
 				</div>
-				
+				<?php } // - - - - - - - - - - USE SHOP: end ?>
 				<div id="tabs-3">
 					<table id="tbl_UpcomingOrders" class="tblListingDefault">
 						<thead>
